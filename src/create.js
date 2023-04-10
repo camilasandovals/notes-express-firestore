@@ -1,4 +1,4 @@
-import { db } from "../dbConnect.js"
+import { db } from "./dbConnect.js"
 import { FieldValue } from "firebase-admin/firestore";
 
 const coll = db.collection("employees");
