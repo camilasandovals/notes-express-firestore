@@ -2,6 +2,7 @@ import express from "express"
 import cors from "cors"
 import { addEmploye } from "./src/create.js";
 // import { getAllEmployees } from "./src/readAll.js";
+import { deleteEmployee } from "./src/delete.js";
 
 const PORT = 3002;
 const app = express ()
@@ -16,7 +17,7 @@ app.get("/", (req,res) => {
 
 app.post("/employees", addEmploye)
 // app.get("/employees", getAllEmployees)
-
+app.delete("/employees/:id", deleteEmployee)
 
 app.listen(PORT, ()=> {
     console.log(`Listening to http://localhost:${PORT}..`)
